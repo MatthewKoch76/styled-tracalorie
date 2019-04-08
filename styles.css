@@ -1,11 +1,70 @@
+:root{
+  --text-clr: whitesmoke;
+
+  --theme-red: 50;
+  --theme-green: 50;
+  --theme-blue: 050;
+
+  --theme-variance: 030;
+  --text-variance: 100;
+
+  --bg-color: rgb(
+    var(--theme-red),
+    var(--theme-green),
+    var(--theme-blue));
+
+  --card-bg-color: rgb(
+    calc(var(--theme-red) + var(--theme-variance)), 
+    calc(var(--theme-green) + var(--theme-variance)), 
+    calc(var(--theme-blue) + var(--theme-variance)) 
+  );
+
+  --input-color:  rgb(
+    calc(var(--theme-red) + var(--text-variance)), 
+    calc(var(--theme-green) + var(--text-variance)), 
+    calc(var(--theme-blue) + var(--text-variance)) 
+  );
+
+  --text-color: rgb(
+    calc(var(--theme-red) + calc(var(--theme-variance) + var(--text-variance))), 
+    calc(var(--theme-green) + calc(var(--theme-variance) + var(--text-variance))), 
+    calc(var(--theme-blue) + calc(var(--theme-variance) + var(--text-variance)))
+  );
+}
+
 body{
-  background-color: lightgray;
+  background-color: var(--bg-color);
 }
 
 .card{
-  background-color: whitesmoke;
+  background-color: var(--card-bg-color);
+  color: var(--text-color);
 }
 
 .collection-item{
-  background-color: whitesmoke;
+  background-color: var(--card-bg-color);
+}
+
+#item-list #item-list.collection{
+  background-color: var(--card-bg-color);
+}
+
+.nav-wrapper{
+  color: var(--text-clr);
+}
+
+.btn{
+  color: var(--text-clr);
+}
+
+.item-slot{
+  color: black;
+}
+
+textarea:focus, input:focus {
+  color: var(--text-clr);
+}
+
+input, select, textarea{
+  color: var(--text-clr);
 }

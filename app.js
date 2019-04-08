@@ -177,6 +177,7 @@ const UICtrl = (() => {
   const UISelectors = {
     itemList: '#item-list',
     listItems: '#item-list li',
+    itemCard: '#item-card',
     addBtn: '.add-btn',
     updateBtn: '.update-btn',
     deleteBtn: '.delete-btn',
@@ -216,7 +217,7 @@ const UICtrl = (() => {
       const li = document.createElement('li');
 
       //add class
-      li.className = 'collection-item';
+      li.className = 'collection-item item-slot';
 
       //add id
       li.id = `item-${item.id}`;
